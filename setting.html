@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<title>Timer Setting</title>
+<link rel="stylesheet" href="setting.css">
+<script src="setting.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Countdown Timer</h1>
+      <form action="countdown.html" onsubmit="return validateInput()">
+
+        <div class="input-container">
+          <input type="number" id="hours" name="hours" value="0">
+          <label for="hours">Hours</label>
+        </div>
+
+        <div class="input-container">
+          <input type="number" id="minutes" name="minutes" value="0">
+          <label for="minutes">Minutes</label>
+        </div>
+
+        <div class="input-container">
+          <input type="number" id="seconds" name="seconds" value="0">
+          <label for="seconds">Seconds</label>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Start Countdown">
+      </form>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay" onclick="closePopup()"></div>
+  <div id="popup" class="popup">
+    <p>Please enter positive values for hours, minutes, and seconds.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="countdown.css">
+<title>Countdown Timer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="countdown">
+            <div class="hourstext">
+                <p id="hours-countdown"></p>
+                <p>Hours</p>
+            </div>
+            <div class="minutestext">
+                <p id="minutes-countdown"></p>
+                <p>Minutes</p>
+            </div>
+            <div class="secondstext">
+                <p id="seconds-countdown"></p>
+                <p>Seconds</p>
+            </div>
+        </div>   
+    </div>
+    <div class="buttoncountdown">
+        <div class="backbutton">
+            <form action="setting.html">
+                <button type="submit">Back</button>
+            </form>
+        </div>
+        <div class="pausebutton">
+            <button id="pausePlayButton" onclick="togglePausePlay()">
+                <span id="pausePlayText">Pause</span>
+            </button>
+        </div>
+        <div class="restartbutton">
+            <button onclick="restartTimer()">Restart Timer</button>
+        </div>    
+    </div>
+    <div id="myModal" class="modal">
+        <audio id="loopSound" loop>
+            <source src="short_alarm.mp3" type="audio/mpeg">
+        </audio>
+        <div class="modal-content">
+            <p>Time's up!</p>
+            <div class="back-button">
+                <form action="setting.html">
+                    <button type="submit" id="backbutton">Back</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="countdown.js"></script>
+</body>
+</html>

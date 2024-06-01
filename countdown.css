@@ -1,0 +1,96 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.countdown {
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hourstext,
+.minutestext,
+.secondstext {
+    text-align: center;
+}
+
+#hours-countdown,
+#minutes-countdown,
+#seconds-countdown {
+    font-size: 250%;
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+.back-button button {
+    font-family: "Roboto Mono", monospace;
+    border: 1px solid black;
+    padding: 5px 30px;
+    background-color: white;
+    font-size: 100%;
+}
+
+.back-button button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttoncountdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttoncountdown .pausebutton, .restartbutton {
+    padding-left: 10px;
+}
+
+.buttoncountdown button {
+    font-family: "Roboto Mono", monospace;
+    border: 1px solid black;
+    padding: 10px 30px;
+    background-color: white;
+    font-size: 70%;
+}
+
+.buttoncountdown button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-content p {
+    font-size: 120%;
+}
